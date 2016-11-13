@@ -44,6 +44,7 @@ struct CharPtrFuncs {
   }
 
   static const bool has_append = false;
+  static const bool has_equals = true;
   static const bool should_duplicate = false;
 };
 
@@ -76,6 +77,7 @@ struct StdStringFuncs {
   }
 
   static const bool has_append = true;
+  static const bool has_equals = true;
   static const bool should_duplicate = true;
 };
 
@@ -108,6 +110,7 @@ struct StringFuncs<const __FlashStringHelper*> {
   }
 
   static const bool has_append = false;
+  static const bool has_equals = true;
   static const bool should_duplicate = true;
 };
 #endif
